@@ -1,0 +1,14 @@
+alias aliases="mvim ~/dotfiles-local/aliases.local"
+alias be="bundle exec"
+alias bes="bundle exec rspec"
+alias cdotfiles="cd ~/dotfiles-local"
+alias cthoughtbot="cd ~/code/thoughtbot"
+alias dotfiles="mvim ~/dotfiles-local"
+alias l="ls -l"
+alias ls="ls -FG"
+alias r="bin/rails"
+alias rk="bin/rake"
+alias s="bin/rspec"
+alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias vi='mvim -v'
+alias vim='vim -v'

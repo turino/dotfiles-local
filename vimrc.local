@@ -1,0 +1,67 @@
+" use cmatcher plugin w/ ctrlp
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
+" limit ctrlp results
+set wildignore+=*/tmp/*,*.o,*.so,*.swp,*.zip,*/node_modules/*,*/bower_components/*
+
+let g:syntastic_html_tidy_exec = 'tidy5'
+
+" make test commands execute using dispatch.vim
+let test#strategy = "terminal"
+
+colorscheme jellybeans
+
+" allow unsaved background buffers and remember marks/undo for them
+set hidden
+
+set ignorecase
+set smartcase
+
+set scrolloff=4 " Keep at least 4 lines below cursor
+set softtabstop=2
+set t_Co=256 " 256 colors
+
+set formatoptions=l
+
+nnoremap <leader>o :!rubocop %<cr>
+nnoremap <leader>p :!rubocop -a %<cr>
+nnoremap <leader>i :!'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' .<cr><cr>
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" insert new line above without insert mode
+nmap <S-Enter> O<Esc>
+
+" ctrl-S to exit insert mode and save
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
+" <c-l> to complete line
+imap <c-l> <C-X><C-L>
+
+" Can't be bothered to understand ESC vs <c-c> in insert mode
+imap <c-c> <esc>
+
+nnoremap j gj
+nnoremap k gk
+
+nnoremap 0 ^
+nnoremap ^ 0
+xnoremap 0 ^
+xnoremap ^ 0
+
+nnoremap Y y$
+nmap gR gr$
+
+
+" Press F4 to toggle highlighting on/off, and show current value.
+:noremap <F4> :set hlsearch! hlsearch?<CR>

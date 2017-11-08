@@ -1,0 +1,2 @@
+# prioritize brewed programs over system programs
+export PATH="/usr/local/bin:$PATH"

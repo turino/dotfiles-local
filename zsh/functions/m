@@ -1,0 +1,9 @@
+# No arguments: `mvim .`
+# With arguments: acts like `mvim`
+m() {
+  if [[ $# -gt 0 ]]; then
+    mvim "$@"
+  else
+    mvim .
+  fi
+}

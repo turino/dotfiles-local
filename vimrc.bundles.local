@@ -1,0 +1,24 @@
+" Don't install
+UnPlug 'tComment'
+UnPlug 'vim-coffee-script'
+
+" Colorschemes
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'nanotech/jellybeans.vim'
+
+" Other
+Plug 'JazzCore/ctrlp-cmatcher'
+Plug 'bling/vim-airline'        " better status bar
+Plug 'christoomey/vim-conflicted'
+Plug 'christoomey/vim-sort-motion'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'sheerun/vim-polyglot'
+Plug 'tommcdo/vim-exchange'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'vim-scripts/ReplaceWithRegister'
