@@ -1,9 +1,3 @@
-" use cmatcher plugin w/ ctrlp
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-
-" limit ctrlp results
-set wildignore+=*/tmp/*,*.o,*.so,*.swp,*.zip,*/node_modules/*,*/bower_components/*
-
 let g:syntastic_html_tidy_exec = 'tidy5'
 
 " make test commands execute using dispatch.vim

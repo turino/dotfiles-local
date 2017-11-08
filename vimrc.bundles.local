@@ -7,7 +7,6 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'nanotech/jellybeans.vim'
 
 " Other
-Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'bling/vim-airline'        " better status bar
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
