@@ -9,6 +9,7 @@ alias ls="ls -FG"
 alias r="bin/rails"
 alias rk="bin/rake"
 alias s="bin/rspec"
+alias ss="spring stop"
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 alias vi='mvim -v'
 alias vim='vim -v'

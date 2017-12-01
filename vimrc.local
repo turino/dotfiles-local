@@ -1,12 +1,15 @@
 let g:syntastic_html_tidy_exec = 'tidy5'
 
-" make test commands execute using dispatch.vim
+" make test commands execute using terminal
 let test#strategy = "terminal"
 
 colorscheme jellybeans
 
-" allow unsaved background buffers and remember marks/undo for them
-set hidden
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 set ignorecase
 set smartcase
@@ -17,6 +20,7 @@ set t_Co=256 " 256 colors
 
 set formatoptions=l
 
+nnoremap <leader>y :!terminal "clear;ruby %:p"<cr><cr>
 nnoremap <leader>o :!rubocop %<cr>
 nnoremap <leader>p :!rubocop -a %<cr>
 nnoremap <leader>i :!'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' .<cr><cr>
@@ -24,16 +28,15 @@ nnoremap <leader>i :!'/Applications/Sublime Text.app/Contents/SharedSupport/bin/
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
+" grep word under cursor
+nnoremap K :Ag <C-R><C-W><CR>
+
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
 " insert new line above without insert mode
 nmap <S-Enter> O<Esc>
-
-" ctrl-S to exit insert mode and save
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -56,6 +59,7 @@ xnoremap ^ 0
 nnoremap Y y$
 nmap gR gr$
 
+nnoremap Q @q
 
 " Press F4 to toggle highlighting on/off, and show current value.
 :noremap <F4> :set hlsearch! hlsearch?<CR>
