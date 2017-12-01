@@ -1,2 +1,5 @@
 # prioritize brewed programs over system programs
 export PATH="/usr/local/bin:$PATH"
+
+# this should be handled by thoughtbot dotfiles, but didn't work, so...
+source /Users/jt/.asdf/asdf.sh
