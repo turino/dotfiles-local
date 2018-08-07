@@ -1,5 +1,12 @@
+# use brewed python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # prioritize brewed programs over system programs
 export PATH="/usr/local/bin:$PATH"
+
+# add Go to path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # this should be handled by thoughtbot dotfiles, but didn't work, so...
 source /Users/jt/.asdf/asdf.sh
