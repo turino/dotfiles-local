@@ -9,4 +9,4 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # this should be handled by thoughtbot dotfiles, but didn't work, so...
-source /Users/jt/.asdf/asdf.sh
+source $HOME/.asdf/asdf.sh
