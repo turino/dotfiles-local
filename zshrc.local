@@ -8,5 +8,7 @@ export PATH="/usr/local/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# this should be handled by thoughtbot dotfiles, but didn't work, so...
-source $HOME/.asdf/asdf.sh
+# load chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+# enable auto-switching rubies
+source /usr/local/opt/chruby/share/chruby/auto.sh
