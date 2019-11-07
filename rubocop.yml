@@ -529,6 +529,13 @@ Lint/ParenthesesAsGroupedExpression:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#parens-no-spaces'
   Enabled: false
 
+Lint/RedundantCopDisableDirective:
+  Description: >-
+                 Checks for rubocop:disable comments that can be removed.
+                 Note: this cop is not disabled when disabling all cops.
+                 It must be explicitly disabled.
+  Enabled: false
+
 Lint/RequireParentheses:
   Description: >-
                  Use parentheses in the method call to avoid confusion
@@ -537,13 +544,6 @@ Lint/RequireParentheses:
 
 Lint/UnderscorePrefixedVariableName:
   Description: 'Do not use prefix `_` for a variable that is used.'
-  Enabled: false
-
-Lint/UnneededCopDisableDirective:
-  Description: >-
-                 Checks for rubocop:disable comments that can be removed.
-                 Note: this cop is not disabled when disabling all cops.
-                 It must be explicitly disabled.
   Enabled: false
 
 Lint/Void:
