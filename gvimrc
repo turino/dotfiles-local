@@ -9,7 +9,7 @@ set guioptions+=c
 
 if has("gui_macvim")
   macmenu &File.Print key=<nop>
-  map <D-p> :<C-U>CtrlP<CR>
+  map <D-p> <C-p>
 
   macmenu &Edit.Undo key=<nop>
   map <D-z> u

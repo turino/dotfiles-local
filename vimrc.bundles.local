@@ -1,6 +1,5 @@
 " Don't install
 UnPlug 'tComment'
-UnPlug 'vim-coffee-script'
 
 " Colorschemes
 Plug 'chriskempson/vim-tomorrow-theme'
