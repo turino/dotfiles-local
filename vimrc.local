@@ -6,6 +6,12 @@ let g:rustfmt_autosave = 1
 " make test commands execute using terminal
 let test#strategy = "terminal"
 
+let g:ale_fixers = {
+\   'css': ['prettier'],
+\   'javascript': ['prettier'],
+\   'ruby': ['rubocop'],
+\}
+
 colorscheme jellybeans
 
 " Persistent undo
@@ -25,8 +31,7 @@ set formatoptions=l
 
 nnoremap <leader>y :!terminal "clear;go run %:p"<cr><cr>
 nnoremap <leader>o :!rubocop %<cr>
-nnoremap <leader>p :!rubocop -a %<cr>
-nnoremap <leader>i :!'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' .<cr><cr>
+nnoremap <leader>p :ALEFix<cr>
 
 " grep word under cursor
 nnoremap <leader>k :Ag <C-R><C-W><CR>
