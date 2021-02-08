@@ -1,19 +1,35 @@
 [user]
   name = Jacob Turino
-  email = jacob@thoughtbot.com
+  email = jacob_t@beezwax.net
+[checkout]
+  defaultRemote = origin
 [alias]
   alias = config --get-regexp alias
   b = branch
   car = commit --amend --no-edit
-  dmerged = !git checkout master && git branch --merged | grep -v "\\*" | xargs -n 1 git branch -d && git checkout -
-  mup = !git checkout master && git pull && git checkout -
-  pom = push -u origin master
+  cmw = !git add . && git commit -m wip
+  com = checkout main
+  cos = checkout staging
+  deletelastcommit = reset --hard HEAD^
+  dmerged = !git checkout staging && git branch --merged | grep -v "\\*" | xargs -n 1 git branch -d && git checkout -
+  mup = !git checkout main && git pull && git checkout -
+  pom = push -u origin main
   ps = push
   rbc = rebase --continue
   ri = rebase -i
-  sal = !git sla # Accepting that I will continue to mistype this
+  rim = rebase -i main
+  rimup = !git mup && git rebase -i main
+  ris = rebase -i staging
+  risup = !git sup && git rebase -i staging
+  rm = rebase main
+  rmup = !git mup && git rebase main
+  rs = rebase staging
+  rsup = !git sup && git rebase staging
   sl = log --oneline --decorate --graph -20
   sla = log --oneline --decorate --graph --all -20
+  sup = !git checkout staging && git pull && git checkout -
   uncommit = reset --soft HEAD^
   unstage = reset
   upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+[pull]
+  ff = only
