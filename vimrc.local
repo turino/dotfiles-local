@@ -55,6 +55,7 @@ imap <c-l> <C-X><C-L>
 
 " Can't be bothered to understand ESC vs <c-c> in insert mode
 imap <c-c> <esc>
+imap <c-j> <esc>
 
 nnoremap j gj
 nnoremap k gk
