@@ -12,3 +12,5 @@ export PATH=$PATH:$GOPATH/bin
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 # enable auto-switching rubies
 source /usr/local/opt/chruby/share/chruby/auto.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,21 +1,27 @@
-alias aliases="mvim ~/dotfiles-local/aliases.local"
-alias be="bundle exec"
-alias bes="bundle exec rspec"
-alias cdotfiles="cd ~/dotfiles-local"
-alias cbz="cd ~/code/beezwax"
-alias dotfiles="mvim ~/dotfiles-local"
-alias etest="RAILS_ENV=test"
-alias l="ls -l"
-alias ls="ls -FG"
-alias r="bin/rails"
-alias reset_db="bin/rails db:drop db:create db:migrate"
-alias rk="bin/rake"
-alias s="bin/rspec"
-alias sf="bin/rspec --tag type:feature"
-alias sfn="snf"
-alias snf="bin/rspec --tag ~type:feature"
-alias sof="bin/rspec --only-failures"
-alias ss="spring stop"
-alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias a='ls -lrthG'
+alias aliases='vim ~/dotfiles-local/aliases.local && reload'
+alias be='bundle exec'
+alias bes='bundle exec rspec'
+alias cbz='cd ~/code/beezwax'
+alias cdotfiles='cd ~/dotfiles-local'
+alias dotfiles='mvim ~/dotfiles-local'
+alias etest='RAILS_ENV=test'
+alias falias='eval $(alias | fzf | sed "s/\([^=]*\)=.*/\1/")'
+alias fpath='path | fzf'
+alias gco='git checkout $(git branch | fzf)'
+alias gcor='git checkout --track $(git branch --remote | fzf)'
+alias gdel='git branch -D $(git branch | fzf -m)'
+alias l='ls -l'
+alias ls='ls -FG'
+alias r='bin/rails'
+alias reload='source ~/.zshrc'
+alias reset_db='bin/rails db:drop db:create db:migrate'
+alias rk='bin/rake'
+alias s='bin/rspec'
+alias sf='bin/rspec --tag type:feature'
+alias sfn='snf'
+alias snf='bin/rspec --tag ~type:feature'
+alias sof='bin/rspec --only-failures'
+alias ss='spring stop'
 alias vi='mvim -v'
 alias vim='vim -v'
