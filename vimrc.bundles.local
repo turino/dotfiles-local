@@ -9,6 +9,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'bling/vim-airline'        " better status bar
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-sort-motion'
+Plug 'easymotion/vim-easymotion'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'

@@ -1,18 +1,22 @@
 let g:syntastic_html_tidy_exec = 'tidy5'
 
-" run rust formatter on save
-let g:rustfmt_autosave = 1
+set nowrap
 
 " make test commands execute using terminal
 let test#strategy = "terminal"
 
 let g:ale_fixers = {
-\   'css': ['prettier'],
-\   'javascript': ['prettier'],
+\   'javascript': ['eslint', 'prettier'],
 \   'ruby': ['rubocop'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
 \}
+let g:ale_ruby_rubocop_auto_correct_all = 1
 
 colorscheme jellybeans
+
+let g:airline_section_y = ''
+let g:airline_section_z = '%l/%L:%c'
+let g:airline_extensions = []
 
 " Persistent undo
 set undofile
@@ -20,10 +24,25 @@ set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
 
-" set ignorecase
-" set smartcase
+" easymotion
+map <Leader>e <Plug>(easymotion-prefix)
 
-set scrolloff=4 " Keep at least 4 lines below cursor
+" move to {char}
+map <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" move to {char}{char}
+nmap <Leader>/ <Plug>(easymotion-overwin-f2)
+
+" move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" move to word
+map <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+set scrolloff=2 " Keep at least 2 lines below cursor
 set softtabstop=2
 set t_Co=256 " 256 colors
 
@@ -34,7 +53,8 @@ nnoremap <leader>o :!rubocop %<cr>
 nnoremap <leader>p :ALEFix<cr>
 
 " grep word under cursor
-nnoremap <leader>k :Ag <C-R><C-W><CR>
+nnoremap <leader>k :Ag -ws <C-R><C-W><CR>
+nnoremap <bar> :Ag -ws <C-R><C-W> app/
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
