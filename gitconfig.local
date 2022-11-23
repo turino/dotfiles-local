@@ -16,12 +16,13 @@
   pom = push -u origin main
   ps = push
   rbc = rebase --continue
+  rab = rebase --abort
   ri = rebase -i
   rim = rebase -i main
   rimup = !git mup && git rebase -i main
   ris = rebase -i staging
   risup = !git sup && git rebase -i staging
-  rm = rebase main
+  rmm = rebase main
   rmup = !git mup && git rebase main
   rs = rebase staging
   rsup = !git sup && git rebase staging
